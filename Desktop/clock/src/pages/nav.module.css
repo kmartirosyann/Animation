@@ -1,0 +1,27 @@
+.menu{
+    margin: 0;
+    display: flex;
+    background: #324860;
+    list-style-type: none;
+    gap:20px;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+ 
+}
+
+
+.menu li {
+    display: block;
+    
+}
+
+.selected{
+    background: #603232;
+   
+  
+}

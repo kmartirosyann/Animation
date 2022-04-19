@@ -1,0 +1,87 @@
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #2f363e;
+}
+
+.container{
+  position: relative;
+  background: #2f363e;
+  border-radius: 20px;
+  border-top-left-radius: 225px;
+  border-top-right-radius: 225px;
+  box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.75), 
+              10px 10px 70px rgba(0, 0, 0, 0.25),
+              inset  5px 5px 10px rgba(0, 0, 0, 0.5),
+              inset 5px 5px 20px rgba(0, 0, 0, 0.2),
+              inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.clock{
+  position: relative;
+  width: 450px;
+  height: 450px;
+  background: #2f363e;
+  border-radius: 50%;
+  box-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25),
+              inset  5px 5px 10px rgba(0, 0, 0, 0.5),
+              inset 5px 5px 20px rgba(0, 0, 0, 0.2),
+              inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.clock::before{
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #2f363e;
+}
+
+.clock::after{
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #2f363e;
+}
+
+.time{
+  display: flex;
+  color: #fff;
+  padding: 20px 0 30px;
+
+}
+
+.hour::after{
+content: ':';
+padding: 0 5px;
+}
+
+.minutes::after{
+  content: ':';
+  padding: 0 5px;
+  animation: animate 1s steps(1) infinite;
+}
+
+@keyframes animate {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+}
